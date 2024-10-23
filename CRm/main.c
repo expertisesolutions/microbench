@@ -2,7 +2,7 @@
 #include "randArr.h"
 #include "common.h"
 
-#define ASIZE 256
+#define ASIZE 16384
 
 int temp[ASIZE];
 
