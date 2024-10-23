@@ -29,17 +29,17 @@
     _Time1 = _ClockGetTime(); \
     printf("_ticks: %llu\n",_Time1 - _Time0);
 
+
+
 #include <time.h>
-
-
 
 typedef unsigned long long ticks;
 static inline __attribute__((always_inline)) ticks _ClockGetTime()
 {
-  //return -1;
-  //struct timespec ts;
-  //clock_gettime(CLOCK_REALTIME, &ts);
-  //return (ticks)(ts.tv_sec) * 1000000LL + (ticks)(ts.tv_nsec) / 1000LL;
+  // return -1;
+  struct timespec ts;
+  clock_gettime(CLOCK_REALTIME, &ts);
+  return (ticks)(ts.tv_sec) * 1000000LL + (ticks)(ts.tv_nsec) / 1000LL;
 }
 
 #endif // NO MAGIC

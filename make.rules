@@ -2,7 +2,7 @@ include ../make.config
 
 CC?=gcc
 OPT?=-O3
-MAGIC?=-DMAGIC
+# MAGIC?=-DMAGIC
 
 #-fno-tree-vectorize 
 CFLAGS+=${OPT} ${MAGIC} -I../
@@ -23,7 +23,7 @@ pre_req:
 endif
 
 bench: bench.c pre_req
-	${CC} ${CFLAGS} bench.c --static --std=c99  -lm -o bench
+	${CC} ${CFLAGS} bench.c --static --std=gnu99  -lm -o bench
 
 clean:
 	rm -f bench
