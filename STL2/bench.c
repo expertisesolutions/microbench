@@ -31,13 +31,3 @@ int loop(int zero) {
 
   return arr[zero].p1;
 }
-
-
-int main(int argc, char* argv[]) {
-   argc&=10000;
-   ROI_BEGIN(); 
-   int t=loop(argc); 
-   ROI_END();
-   volatile int a = t;
-}
-

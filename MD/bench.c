@@ -6,9 +6,6 @@
 #define ASIZE 2048
 #define STEP   128
 #define ITERS    4
-#define LEN   2048
-
-int arr[ASIZE];
 
 struct ll {
   int val;
@@ -26,25 +23,4 @@ int loop(int zero,struct ll* n) {
     }
   }
   return t;
-}
-
-int main(int argc, char* argv[]) {
-   argc&=10000;
-   struct ll *n, *cur;
-
-   int i;
-   n=malloc(sizeof(struct ll));
-   cur=n;
-   for(i=0;i<LEN;++i) {
-     cur->val=i;
-     cur->_next=malloc(sizeof(struct ll));
-     cur=cur->_next;
-   }
-   cur->val=100;
-   cur->_next=NULL;
-
-   ROI_BEGIN(); 
-   int t=loop(argc,n);
-   ROI_END();
-   volatile int a = t;
 }

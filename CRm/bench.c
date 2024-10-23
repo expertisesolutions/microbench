@@ -1,11 +1,3 @@
-#include <stdio.h>
-#include "randArr.h"
-#include "common.h"
-
-#define ASIZE 256
-
-int temp[ASIZE];
-
 void merge(int numbers[], int temp[], int left, int mid, int right)
 {
   int i, left_end, num_elements, tmp_pos;
@@ -70,12 +62,4 @@ __attribute__ ((noinline))
 void mergeSort(int numbers[], int temp[], int array_size)
 {
   m_sort(numbers, temp, 0, array_size - 1);
-}
- 
-int main(int argc, char* argv[]) {
-   argc&=10000;
-   ROI_BEGIN(); 
-   mergeSort(randArr,temp,ASIZE);
-   ROI_END();
-   volatile int a = temp[argc];
 }

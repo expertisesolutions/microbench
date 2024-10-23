@@ -22,11 +22,3 @@ float loop(int zero) {
 
   return t1;
 }
-
-int main(int argc, char* argv[]) {
-   argc&=10000;
-   ROI_BEGIN(); 
-   int t=loop(argc); 
-   ROI_END();
-   volatile float a = t;
-}

@@ -34,15 +34,3 @@ float loop3(int zero) {
   }
   return f;
 }
-
-int main(int argc, char* argv[]) {
-   argc&=10000;
-   //loop0(argc);
-   //loop1(argc);
-   //loop2(argc);
-
-   ROI_BEGIN(); 
-   float f =loop3(argc);
-   ROI_END();
-   volatile float a = f;
-}

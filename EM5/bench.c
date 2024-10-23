@@ -24,11 +24,3 @@ int loop(int zero) {
   }
   return t1+t2+t3+t4+t5;
 }
-
-int main(int argc, char* argv[]) {
-   argc&=10000;
-   ROI_BEGIN(); 
-   int t=loop(argc); 
-   ROI_END();
-   volatile int a = t;
-}
